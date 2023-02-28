@@ -73,6 +73,7 @@ body {
       display: flex;
       column-gap: 40px;
       justify-content: center;
+      flex-wrap: wrap;
       .main-card {
         .phone-cards {
           display: flex;
@@ -172,23 +173,28 @@ body {
   }
   .footer {
     margin-top: 100px;
-    height: 249px;
+    min-height: 249px;
     width: 100%;
     background: #0052cc;
     border-radius: 0px;
-  }
-  .footer {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
     .logo {
       margin-top: 40px;
       margin-left: 40px;
+      margin-right: 40px;
       bottom: 70px;
       font-weight: 500;
       font-size: 24px;
       color: #ffffff;
     }
+
     .footer-list {
       display: flex;
+
       column-gap: 70px;
       align-items: center;
 
@@ -204,6 +210,7 @@ body {
           }
         }
       }
+
       .email-btn {
         .email {
           width: 254px;
@@ -232,5 +239,79 @@ body {
         height: 21px;
       }
     }
+  }
+  .container_ {
+    height: 100vh;
+    background: lightblue;
+    position: relative;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+  /* რაც გამოდის ბურგერ დაჭერის დროს - overlay */
+  .nav-bar {
+    position: absolute;
+    display: none;
+    background-color: #008080;
+    top: -800px;
+    left: 0;
+    transition: all 0.5s;
+    right: 100%;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .toggle {
+    left: 0;
+  }
+  /* listebis gastilva */
+  .nav-list-item {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: 22px;
+  }
+
+  /* Burger icon styles */
+  .toggle-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px 2px 2px 3px;
+    cursor: pointer;
+  }
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    transition: transform 0.2s ease-out;
+  }
+  .toggle .line1 {
+    transform: scale(0.9) rotate(-45deg) translate(-6px, 4px);
+  }
+  .toggle .line2 {
+    display: none;
+  }
+  .toggle .line3 {
+    transform: scale(0.9) rotate(45deg) translate(-6px, -4px);
+  }
+  .nav-bar.fixed {
+    position: fixed;
+    top: 0;
+  }
+  .nav-bar.toggle {
+    display: block;
   }
 }

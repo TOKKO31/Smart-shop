@@ -1,0 +1,22 @@
+@media (max-width: 965px) {
+  .container .header .nav-bar-1 {
+    display: none;
+  }
+  .container .header .nav-bar {
+    display: block;
+  }
+  .container .footer .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .container .header .nav-picture {
+    display: none;
+  }
+  .container .header-2 .serch input {
+    width: 200px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
